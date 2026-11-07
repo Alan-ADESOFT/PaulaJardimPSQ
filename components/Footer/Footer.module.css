@@ -8,14 +8,14 @@
   gap: 16px;
   align-items: center;
   padding: 26px clamp(18px, 3vw, 40px) calc(26px + env(safe-area-inset-bottom));
-  background: var(--color-ink);
+  background: var(--surface-inverse);
   color: var(--color-offwhite-a60);
   font-size: 14px;
 }
 :global(.pj) .foot {
   display: block;
   padding: clamp(64px, 8vw, 110px) 0 calc(34px + env(safe-area-inset-bottom));
-  background: var(--color-ink);
+  background: var(--surface-inverse);
   color: var(--color-offwhite-a55);
   font-size: 14px;
   text-align: center;
@@ -27,7 +27,7 @@
   font-weight: 300;
   font-size: clamp(46px, 7vw, 96px);
   line-height: 1;
-  color: var(--color-offwhite);
+  color: var(--text-inverse);
   letter-spacing: -0.01em;
 }
 :global(.pj) .footLine {
@@ -35,7 +35,7 @@
   width: min(420px, 70%);
   height: 1px;
   margin: clamp(28px, 3vw, 40px) auto;
-  background: var(--color-gold);
+  background: var(--accent);
 }
 :global(.pj) .footRow {
   display: flex;
@@ -63,13 +63,22 @@
   text-decoration: none;
   transition: color 0.4s;
 }
+/* No toque o link precisa de 44px de altura. O padding aumenta a área clicável e as margens
+   negativas compensam, então o desenho do rodapé não se mexe. */
+@media (pointer: coarse) {
+  :global(.pj) .backToTop {
+    padding-block: 10px;
+    margin-top: calc(clamp(30px, 3vw, 40px) - 10px);
+    margin-bottom: -10px;
+  }
+}
 :global(.pj) .backToTop svg {
   width: 16px;
   height: 16px;
   transition: transform 0.5s var(--ease-out);
 }
 :global(.pj) .backToTop:hover {
-  color: var(--color-gold-light);
+  color: var(--text-accent-inverse);
 }
 :global(.pj) .backToTop:hover svg {
   transform: translateY(-5px);

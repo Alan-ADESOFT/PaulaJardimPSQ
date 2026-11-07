@@ -13,7 +13,7 @@ html {
 }
 body {
   margin: 0;
-  background: var(--color-ivory);
+  background: var(--surface-page);
 }
 .pj,
 .pj *,
@@ -26,8 +26,8 @@ body {
   font-size: 16px;
   line-height: 1.72;
   font-weight: 500;
-  color: var(--color-text);
-  background: var(--color-ivory);
+  color: var(--text-body);
+  background: var(--surface-page);
   overflow-x: clip;
   text-rendering: optimizeLegibility;
 }
@@ -63,11 +63,11 @@ body {
   max-width: none !important;
 }
 .pj ::selection {
-  background: var(--color-gold-light);
-  color: var(--color-ink);
+  background: var(--accent-soft);
+  color: var(--text-strong);
 }
 .pj :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 4px;
 }
 .pj .pj-wrap {
@@ -86,14 +86,14 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-variation-settings: 'SOFT' 40;
-  color: var(--color-ink);
+  color: var(--text-strong);
   letter-spacing: -0.01em;
   line-height: 1.1;
 }
 .pj .pj-t em {
   font-style: italic;
   font-weight: 400;
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
 }
 .pj .pj-h2 {
   font-size: clamp(30px, 3.2vw, 44px);
@@ -105,23 +105,23 @@ body {
   font-style: italic;
   font-weight: 400;
   font-size: 17px;
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
   margin-bottom: 12px;
 }
 .pj .pj-dark .pj-eyebrow {
-  color: var(--color-gold-light);
+  color: var(--text-accent-inverse);
 }
 .pj .pj-p {
   font-size: 16px;
   line-height: 1.75;
-  color: var(--color-text);
+  color: var(--text-body);
   max-width: 36em;
 }
 .pj .pj-lead {
   font-family: var(--font-serif);
   font-size: clamp(19px, 1.6vw, 22px);
   line-height: 1.5;
-  color: var(--color-ink);
+  color: var(--text-strong);
   font-variation-settings: 'SOFT' 40;
 }
 .pj .mw {
@@ -167,8 +167,8 @@ body {
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.01em;
-  color: var(--color-offwhite);
-  background: var(--color-ink);
+  color: var(--primary-contrast);
+  background: var(--primary);
   box-shadow:
     0 16px 34px -18px var(--color-ink-a70),
     inset 0 0 0 1px var(--color-gold-light-a22);
@@ -201,7 +201,7 @@ body {
   display: grid;
   place-items: center;
   border: 1px solid var(--color-gold-light-a55);
-  color: var(--color-gold-light);
+  color: var(--text-accent-inverse);
   overflow: hidden;
   transition:
     background 0.45s var(--ease-out),
@@ -223,9 +223,9 @@ body {
     inset 0 0 0 1px var(--color-gold-light-a50);
 }
 .pj .pj-btn:hover .ar {
-  background: var(--color-gold);
-  border-color: var(--color-gold);
-  color: var(--color-ink);
+  background: var(--accent);
+  border-color: var(--border-accent);
+  color: var(--text-strong);
 }
 .pj .pj-btn:hover .ar svg:first-child {
   transform: translateX(160%);
@@ -248,16 +248,16 @@ body {
   transform: translateY(-4px) rotate(24deg);
 }
 .pj .pj-dark {
-  background: var(--color-graphite);
-  color: var(--color-offwhite);
+  background: var(--surface-inverse-raised);
+  color: var(--text-inverse);
   isolation: isolate;
   z-index: 3;
 }
 .pj .pj-dark .pj-t {
-  color: var(--color-ivory-light-fbf6ec);
+  color: var(--text-strong-inverse);
 }
 .pj .pj-dark .pj-t em {
-  color: var(--color-gold-light);
+  color: var(--text-accent-inverse);
 }
 .pj .pj-dark .pj-p {
   color: var(--color-offwhite-a80);
@@ -302,11 +302,11 @@ body {
   margin: calc(var(--wave-height) * -1) 0 !important;
   -webkit-mask:
     url('/images/edge-curve-top.svg') top/100% 80px no-repeat,
-    linear-gradient(var(--color-black) 0 0) 0 79px/100% calc(100% - 158px) no-repeat,
+    linear-gradient(var(--mask-solid) 0 0) 0 79px/100% calc(100% - 158px) no-repeat,
     url('/images/edge-curve-bottom.svg') bottom/100% 80px no-repeat;
   mask:
     url('/images/edge-curve-top.svg') top/100% 80px no-repeat,
-    linear-gradient(var(--color-black) 0 0) 0 79px/100% calc(100% - 158px) no-repeat,
+    linear-gradient(var(--mask-solid) 0 0) 0 79px/100% calc(100% - 158px) no-repeat,
     url('/images/edge-curve-bottom.svg') bottom/100% 80px no-repeat;
 }
 .pj .pj-hero {
@@ -315,7 +315,7 @@ body {
   overflow: hidden;
   background:
     radial-gradient(70% 55% at 50% 72%, var(--color-white-fffdf8) 0%, var(--color-white-fffdf8-a0) 70%),
-    linear-gradient(180deg, var(--color-ivory-light), var(--color-ivory) 55%, var(--color-sand-e9ddcb));
+    linear-gradient(180deg, var(--surface-raised), var(--surface-page) 55%, var(--color-sand-e9ddcb));
 }
 .pj .pj-hero h1 {
   font-size: clamp(34px, 4.4vw, 64px);
@@ -336,7 +336,7 @@ body {
 }
 .pj .pj-hero h1 em {
   font-style: italic;
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
 }
 .pj.js-on .pj-hero h1 {
   font-variation-settings:
@@ -350,8 +350,8 @@ body {
   transition: font-variation-settings 2.2s var(--ease-out) 0.2s;
 }
 .pj .pj-mark {
-  color: var(--color-gold-light);
-  background-image: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+  color: var(--text-accent-inverse);
+  background-image: linear-gradient(90deg, var(--accent), var(--accent-soft));
   background-repeat: no-repeat;
   background-size: 0% 1px;
   background-position: 0 96%;
@@ -368,7 +368,7 @@ body {
   font-weight: 400;
   font-size: clamp(22px, 2.2vw, 30px);
   line-height: 1.2;
-  color: var(--color-ink);
+  color: var(--text-strong);
 }
 .pj .pj-dur {
   display: inline-flex;
@@ -377,8 +377,8 @@ body {
   margin-top: 18px;
   padding: 8px 16px 8px 10px;
   border-radius: 99px;
-  background: var(--color-ink);
-  color: var(--color-gold-light);
+  background: var(--surface-inverse);
+  color: var(--text-accent-inverse);
   font-weight: 600;
   font-size: 14px;
 }
@@ -394,7 +394,7 @@ body {
 }
 .pj .pj-gain {
   padding: 16px 0;
-  border-top: 1px solid var(--color-line);
+  border-top: 1px solid var(--border-subtle);
 }
 .pj .pj-gain:first-child {
   border-top: 0;
@@ -404,19 +404,19 @@ body {
   font-weight: 500;
   font-size: 19px;
   line-height: 1.3;
-  color: var(--color-ink);
+  color: var(--text-strong);
   margin-bottom: 4px;
 }
 .pj .pj-gain p {
   font-size: 15px;
   line-height: 1.65;
-  color: var(--color-muted);
+  color: var(--text-muted);
 }
 .pj .pj-fmt-t {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(24px, 2.3vw, 30px);
-  color: var(--color-ink);
+  color: var(--text-strong);
   margin-top: clamp(50px, 6vw, 76px);
 }
 .pj .pj-cta-row {
@@ -427,21 +427,21 @@ body {
 .pj .pj-o {
   position: relative;
   padding: clamp(22px, 2.4vw, 30px) 0 clamp(22px, 2.4vw, 30px) 58px;
-  border-top: 1px solid var(--color-line);
+  border-top: 1px solid var(--border-subtle);
 }
 .pj .pj-o h4 {
   font-family: var(--font-serif);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.3;
-  color: var(--color-ink);
+  color: var(--text-strong);
   margin-bottom: 6px;
   transition: transform 0.6s var(--ease-out);
 }
 .pj .pj-o p {
   font-size: 15px;
   line-height: 1.7;
-  color: var(--color-text);
+  color: var(--text-body);
 }
 .pj .pj-o:hover h4 {
   transform: translateX(5px);
@@ -476,7 +476,7 @@ body {
   text-shadow: 0 0 18px var(--color-gold-light-a50);
 }
 .pj .pj-fac.on::before {
-  background: var(--color-gold-light);
+  background: var(--accent-soft);
   box-shadow:
     0 0 0 4px var(--color-gold-light-a20),
     0 0 14px var(--color-gold-light-a90);
@@ -536,7 +536,7 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--color-ivory);
+  background: var(--surface-page);
   border: 2px solid var(--color-gold-dark-a40);
   transition:
     background 0.6s,
@@ -544,8 +544,8 @@ body {
     box-shadow 0.6s;
 }
 .pj .pj-step.on::before {
-  background: var(--color-gold);
-  border-color: var(--color-gold-light);
+  background: var(--accent);
+  border-color: var(--border-accent-inverse);
   box-shadow:
     0 0 0 5px var(--color-gold-a18),
     0 0 14px var(--color-gold-a60);
@@ -556,19 +556,19 @@ body {
   font-weight: 400;
   font-size: clamp(19px, 1.7vw, 22px);
   line-height: 1.2;
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
   margin-bottom: 6px;
 }
 .pj .pj-step p {
   font-size: 15.5px;
   line-height: 1.75;
-  color: var(--color-text);
+  color: var(--text-body);
 }
 .pj .pj-step cite {
   font-style: italic;
   font-family: var(--font-serif);
   font-weight: 500;
-  color: var(--color-ink);
+  color: var(--text-strong);
 }
 .pj .pj-ring {
   position: relative;
@@ -592,9 +592,9 @@ body {
   background: conic-gradient(
     from 0deg,
     var(--color-gold-a30) 0 55%,
-    var(--color-gold) 72%,
-    var(--color-gold-light) 80%,
-    var(--color-gold) 88%,
+    var(--accent) 72%,
+    var(--accent-soft) 80%,
+    var(--accent) 88%,
     var(--color-gold-a30) 98%
   );
   animation: pjRing 3.8s linear infinite;
@@ -633,7 +633,7 @@ body {
 }
 .pj .pj-acard > svg.bd rect {
   fill: none;
-  stroke: var(--bdc, var(--color-gold));
+  stroke: var(--bdc, var(--accent));
   stroke-width: 1.2;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -671,16 +671,16 @@ body {
     transparent 0 62%,
     var(--color-gold-light-a20) 70%,
     var(--color-offwhite-fff1cc) 80%,
-    var(--color-gold) 88%,
+    var(--accent) 88%,
     transparent 96%
   );
   -webkit-mask:
-    linear-gradient(var(--color-black) 0 0) content-box,
-    linear-gradient(var(--color-black) 0 0);
+    linear-gradient(var(--mask-solid) 0 0) content-box,
+    linear-gradient(var(--mask-solid) 0 0);
   -webkit-mask-composite: xor;
   mask:
-    linear-gradient(var(--color-black) 0 0) content-box exclude,
-    linear-gradient(var(--color-black) 0 0);
+    linear-gradient(var(--mask-solid) 0 0) content-box exclude,
+    linear-gradient(var(--mask-solid) 0 0);
   opacity: 0;
   transition: opacity 0.5s;
   animation: pjAng 3.2s linear infinite;
@@ -761,7 +761,7 @@ body {
 }
 .pj .pj-frame > svg.bd rect {
   fill: none;
-  stroke: var(--color-gold);
+  stroke: var(--accent);
   stroke-width: 1.2;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -800,7 +800,7 @@ body {
   right: 0;
   top: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-gold-light), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
 }
 .pj .pj-stair.s1 {
   height: clamp(250px, 26vw, 300px);
@@ -811,8 +811,8 @@ body {
 }
 .pj .pj-stair.s2 {
   height: clamp(370px, 40vw, 460px);
-  background: linear-gradient(170deg, var(--color-text-36322c), var(--color-ink));
-  color: var(--color-offwhite);
+  background: linear-gradient(170deg, var(--color-text-36322c), var(--surface-inverse));
+  color: var(--text-inverse);
   box-shadow:
     0 40px 80px -40px var(--color-ink-a70),
     inset 0 0 0 1px var(--color-gold-light-a30);
@@ -821,10 +821,10 @@ body {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 16px;
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
 }
 .pj .pj-stair.s2 em {
-  color: var(--color-gold-light);
+  color: var(--text-accent-inverse);
 }
 .pj .pj-stair b {
   display: block;
@@ -833,10 +833,10 @@ body {
   font-size: clamp(52px, 6vw, 84px);
   line-height: 1;
   margin: 6px 0 4px;
-  color: var(--color-ink);
+  color: var(--text-strong);
 }
 .pj .pj-stair.s2 b {
-  color: var(--color-gold-light);
+  color: var(--text-accent-inverse);
   padding-bottom: 0.06em;
 }
 .pj .pj-stair strong {
@@ -844,16 +844,16 @@ body {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(22px, 2.2vw, 28px);
-  color: var(--color-ink);
+  color: var(--text-strong);
 }
 .pj .pj-stair.s2 strong {
-  color: var(--color-ivory-light-fbf6ec);
+  color: var(--text-strong-inverse);
 }
 .pj .pj-stair .d {
   display: block;
   margin-top: 4px;
   font-size: 15px;
-  color: var(--color-muted);
+  color: var(--text-muted);
 }
 .pj .pj-stair.s2 .d {
   color: var(--color-offwhite-a78);
@@ -866,7 +866,7 @@ body {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 15px;
-  color: var(--color-gold-light);
+  color: var(--text-accent-inverse);
 }
 .pj .pj-stair:hover {
   transform: translateY(-6px);
@@ -904,7 +904,7 @@ body {
   width: 2px;
   height: 0.9em;
   margin: 0 1px -0.08em;
-  background: var(--color-gold-light);
+  background: var(--accent-soft);
   vertical-align: baseline;
   animation: pjCaret 0.9s steps(1) infinite;
 }
@@ -922,7 +922,7 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid var(--color-gold-light);
+  border: 2px solid var(--border-accent-inverse);
   opacity: 0;
   pointer-events: none;
 }
@@ -1002,7 +1002,7 @@ body {
 }
 .pj .pj-invite > svg.bd rect {
   fill: none;
-  stroke: var(--color-gold);
+  stroke: var(--accent);
   stroke-width: 1.2;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
@@ -1043,8 +1043,8 @@ body {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold-dark);
+  border: 1px solid var(--border-accent);
+  color: var(--text-accent);
   background: var(--color-white-fffdf8-a60);
   transition:
     background 0.5s var(--ease-out),
@@ -1059,8 +1059,8 @@ body {
 }
 .pj .pj-acard:hover .ic,
 .pj .pj-acard.play .ic {
-  background: var(--color-gold);
-  color: var(--color-ink);
+  background: var(--accent);
+  color: var(--text-strong);
   box-shadow: 0 0 0 6px var(--color-gold-a14);
 }
 .pj .pj-acard:hover .ic {
@@ -1133,7 +1133,7 @@ body {
   transform-origin: center;
 }
 .pj .in .sc-cal .d.hot {
-  fill: var(--color-gold);
+  fill: var(--accent);
   transform: scale(1.25);
 }
 .pj .sc-cal .hh {
@@ -1148,7 +1148,7 @@ body {
   font-size: clamp(44px, 6.2vw, 92px);
   line-height: 1.04;
   letter-spacing: -0.015em;
-  color: var(--color-ink);
+  color: var(--text-strong);
   font-variation-settings:
     'SOFT' 40,
     'wght' 220;
@@ -1164,7 +1164,7 @@ body {
   width: 90px;
   height: 1px;
   margin: clamp(22px, 2.4vw, 30px) 0 clamp(20px, 2.2vw, 26px);
-  background: var(--color-gold);
+  background: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 1.4s var(--ease-out) 0.6s;
@@ -1240,7 +1240,7 @@ body {
 }
 
 .pj .pj-faq-item {
-  border-bottom: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--border-subtle);
 }
 .pj .pj-faq-item summary {
   display: flex;
@@ -1252,7 +1252,7 @@ body {
   font-weight: 400;
   font-size: clamp(20px, 2vw, 25px);
   line-height: 1.35;
-  color: var(--color-ink);
+  color: var(--text-strong);
   cursor: pointer;
   list-style: none;
   transition: color 0.3s var(--ease-out);
@@ -1265,7 +1265,7 @@ body {
 }
 .pj .pj-faq-item summary:hover,
 .pj .pj-faq-item[open]:not(.is-closing) summary {
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
 }
 
 @media (max-width: 720px) {
@@ -1289,7 +1289,7 @@ body {
   bottom: -1px;
   height: 1px;
   pointer-events: none;
-  background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold-light), var(--color-gold));
+  background: linear-gradient(90deg, var(--accent-strong), var(--accent-soft), var(--accent));
   transform: scaleX(0);
   transform-origin: left;
   transition:

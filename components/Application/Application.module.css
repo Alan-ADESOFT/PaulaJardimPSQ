@@ -2,7 +2,7 @@
 :global(.pj) .final {
   padding: clamp(40px, 5vw, 72px) 0 calc(var(--space-section) + 10px);
   text-align: center;
-  background: linear-gradient(180deg, var(--color-ivory), var(--color-sand));
+  background: linear-gradient(180deg, var(--surface-page), var(--surface-muted));
 }
 :global(.pj) .final :global(.pj-t) {
   font-size: clamp(28px, 3.2vw, 44px);
@@ -11,14 +11,14 @@
 }
 :global(.pj) .final :global(.pj-p) {
   margin: 22px auto 0;
-  color: var(--color-muted);
+  color: var(--text-muted);
 }
 :global(.pj) .final :global(.pj-p) + :global(.pj-p) {
   margin-top: 12px;
-  color: var(--color-text);
+  color: var(--text-body);
 }
 :global(.pj) .final {
-  background: linear-gradient(180deg, var(--color-ivory), var(--color-sand));
+  background: linear-gradient(180deg, var(--surface-page), var(--surface-muted));
 }
 :global(.pj) .flap {
   position: absolute;
@@ -57,8 +57,8 @@
   background: radial-gradient(
     circle at 35% 30%,
     var(--color-gold-light-e7d4a8),
-    var(--color-gold) 55%,
-    var(--color-gold-dark)
+    var(--accent) 55%,
+    var(--accent-strong)
   );
   box-shadow:
     0 10px 20px -8px var(--color-text-3c2e19-a60),

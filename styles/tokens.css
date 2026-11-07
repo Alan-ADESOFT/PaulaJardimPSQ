@@ -1,5 +1,57 @@
-/* Design tokens: every color, font and base measure used by the page. */
+/*
+ * Design tokens: fonte única de cores, fontes e medidas base da página (só web, sem app nem e-mail).
+ * Duas camadas:
+ *   1. Primitivos (--color-*, --rgb-*): a paleta bruta. Não use direto em componente, exceto pela
+ *      paleta de efeitos (transparências e tons --color-<base>-*) em brilhos, sombras e gradientes.
+ *   2. Semânticos (--surface-*, --text-*, --border-*, --accent*, --primary*, --focus-ring...):
+ *      o que os componentes consomem. Para mudar a identidade, troque o primitivo ou o apontamento aqui.
+ * Regras completas: brandbook/brand-system.md.
+ */
 :root {
+  /* ---- Semânticos ---- */
+  /* Superfícies */
+  --surface-page: var(--color-ivory);
+  --surface-raised: var(--color-ivory-light);
+  --surface-muted: var(--color-sand);
+  --surface-subtle: var(--color-mist);
+  --surface-card: var(--color-white);
+  --surface-inverse: var(--color-ink);
+  --surface-inverse-raised: var(--color-graphite);
+
+  /* Texto (o sufixo -inverse é para seções escuras) */
+  --text-strong: var(--color-ink);
+  --text-body: var(--color-text);
+  --text-muted: var(--color-muted);
+  --text-accent: var(--color-gold-dark);
+  --text-inverse: var(--color-offwhite);
+  --text-inverse-strong: var(--color-white);
+  --text-strong-inverse: var(--color-ivory-light-fbf6ec);
+  --text-accent-inverse: var(--color-gold-light);
+
+  /* Bordas */
+  --border-subtle: var(--color-line);
+  --border-accent: var(--color-gold);
+  --border-accent-inverse: var(--color-gold-light);
+  --border-on-glass: var(--color-white);
+
+  /* Ação principal (botões "aplicar") */
+  --primary: var(--color-ink);
+  --primary-contrast: var(--color-offwhite);
+
+  /* Destaque dourado da marca (traços, pontos, preenchimentos decorativos) */
+  --accent: var(--color-gold);
+  --accent-strong: var(--color-gold-dark);
+  --accent-soft: var(--color-gold-light);
+
+  /* Foco, sombra e máscara */
+  /* Dourado escuro: único tom da paleta com contraste >= 3:1 em todas as superfícies (claras e escuras).
+     O dourado médio dava 2,47:1 no fundo marfim. */
+  --focus-ring: var(--color-gold-dark);
+  --shadow-color: var(--color-ink);
+  --mask-solid: var(--color-black);
+
+  /* ---- Primitivos ---- */
+  /* Fonts, motion and base measures */
   /* Fonts, motion and base measures */
   --font-serif: var(--font-fraunces), Georgia, 'Times New Roman', serif;
   --font-sans: var(--font-inter), 'Helvetica Neue', Arial, sans-serif;

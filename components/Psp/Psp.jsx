@@ -1,4 +1,4 @@
-import { applyLinkProps } from '@/libs/config';
+import ApplyButton from '@/components/ui/ApplyButton/ApplyButton';
 import styles from './Psp.module.css';
 
 export default function Psp() {
@@ -170,14 +170,14 @@ export default function Psp() {
                     height="92"
                     rx="10"
                     strokeWidth="1.2"
-                    style={{ stroke: 'var(--color-gold)' }}
+                    style={{ stroke: 'var(--accent)' }}
                   />
-                  <path d="M8 30h112" strokeWidth="1.2" style={{ stroke: 'var(--color-gold)' }} />
+                  <path d="M8 30h112" strokeWidth="1.2" style={{ stroke: 'var(--accent)' }} />
                   <path
                     d="M34 4v12M94 4v12"
                     strokeWidth="1.6"
                     strokeLinecap="round"
-                    style={{ stroke: 'var(--color-gold)' }}
+                    style={{ stroke: 'var(--accent)' }}
                   />
                   <g className="days" />
                   <g className={styles.clock}>
@@ -186,23 +186,23 @@ export default function Psp() {
                       cy="82"
                       r="20"
                       strokeWidth="1.4"
-                      style={{ fill: 'var(--color-ivory-light-fbf8f1)', stroke: 'var(--color-gold-dark)' }}
+                      style={{ fill: 'var(--color-ivory-light-fbf8f1)', stroke: 'var(--accent-strong)' }}
                     />
                     <path
                       className="hh"
                       d="M130 82v-10"
                       strokeWidth="1.8"
                       strokeLinecap="round"
-                      style={{ stroke: 'var(--color-ink)' }}
+                      style={{ stroke: 'var(--text-strong)' }}
                     />
                     <path
                       className={styles.clockHand}
                       d="M130 82h8"
                       strokeWidth="1.4"
                       strokeLinecap="round"
-                      style={{ stroke: 'var(--color-ink)' }}
+                      style={{ stroke: 'var(--text-strong)' }}
                     />
-                    <circle cx="130" cy="82" r="1.8" style={{ fill: 'var(--color-gold-dark)' }} />
+                    <circle cx="130" cy="82" r="1.8" style={{ fill: 'var(--accent-strong)' }} />
                   </g>
                 </svg>
               </div>
@@ -250,29 +250,7 @@ export default function Psp() {
           <div className="pj-cta-row">
             <div className="pj-ring-wrap" data-rv="">
               <div className="pj-ring">
-                <a className="pj-btn js-apply magnetic" {...applyLinkProps}>
-                  <svg
-                    className="lock"
-                    viewBox="-3 -7 26 30"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    aria-hidden="true"
-                  >
-                    <path className="sh" d="M5 10V7a5 5 0 0 1 10 0v3" />
-                    <rect x="2" y="10" width="16" height="11" rx="3" />
-                    <path d="M10 14v3" />
-                  </svg>
-                  Aplicar para o Protocolo PSP{' '}
-                  <span className="ar">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                      <path d="M5 12h14M13 6l6 6-6 6" />
-                    </svg>
-                  </span>
-                </a>
+                <ApplyButton withLock>Aplicar para o Protocolo PSP</ApplyButton>
               </div>
             </div>
           </div>

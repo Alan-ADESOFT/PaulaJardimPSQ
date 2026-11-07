@@ -17,7 +17,7 @@
   transform-origin: 0 50%;
   transform: scaleX(0);
   z-index: 100;
-  background: var(--color-gold);
+  background: var(--accent);
 }
 :global(.pj) .chapter {
   position: fixed;
@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--color-white);
+  color: var(--text-inverse-strong);
   mix-blend-mode: difference;
   pointer-events: none;
   font-family: var(--font-serif);
@@ -56,7 +56,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--color-white);
+  background: var(--surface-card);
   transform-origin: left;
   transform: scaleX(var(--cp, 0));
 }

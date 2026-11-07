@@ -1,6 +1,6 @@
 /* About section styles */
 :global(.pj) .bio {
-  background: linear-gradient(180deg, var(--color-ivory-light), var(--color-ivory));
+  background: linear-gradient(180deg, var(--surface-raised), var(--surface-page));
 }
 :global(.pj) .bioGrid {
   display: grid;
@@ -37,7 +37,7 @@
   bottom: 0;
   height: 100%;
   z-index: 1;
-  background: var(--color-sand);
+  background: var(--surface-muted);
   transform-origin: top;
   transform: scaleY(0);
   pointer-events: none;
@@ -79,7 +79,7 @@
   background: radial-gradient(
     circle at 35% 30%,
     var(--color-sand-eadbb8),
-    var(--color-gold-light) 45%,
+    var(--accent-soft) 45%,
     var(--color-gold-c7ae7c) 100%
   );
   box-shadow:
@@ -119,7 +119,7 @@
   font-weight: 600;
   font-size: 12.5px;
   line-height: 1.15;
-  color: var(--color-ink);
+  color: var(--text-strong);
 }
 :global(.pj) .bioText {
   padding: calc(var(--space-section) + var(--wave-height)) clamp(24px, 5vw, 90px) clamp(56px, 6vw, 90px);
@@ -151,7 +151,7 @@
   top: 8px;
   width: 2px;
   height: calc(100% - 16px);
-  background: linear-gradient(180deg, var(--color-gold-dark), var(--color-gold-light));
+  background: linear-gradient(180deg, var(--accent-strong), var(--accent-soft));
   transform-origin: top;
   transform: scaleY(var(--p, 0));
   transition: transform 1.2s var(--ease-out);

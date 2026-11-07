@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint .",
+    "check:ui": "node scripts/check-ui.mjs",
+    "check:docs": "node scripts/check-docs.mjs"
   },
   "dependencies": {
     "next": "16.4.1",
@@ -15,5 +18,9 @@
   },
   "engines": {
     "node": ">=20.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.1"
   }
 }

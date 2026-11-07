@@ -1,7 +1,7 @@
 /* Faq section styles */
 :global(.pj) .faq {
   padding: clamp(80px, 9vw, 130px) 0 clamp(30px, 4vw, 60px);
-  background: var(--color-ivory);
+  background: var(--surface-page);
 }
 :global(.pj) .faqHead {
   text-align: center;
@@ -10,16 +10,16 @@
 :global(.pj) .faqList {
   max-width: 900px;
   margin: 0 auto;
-  border-top: 1px solid var(--color-line);
+  border-top: 1px solid var(--border-subtle);
 }
 :global(.pj) .faqToggle {
   position: relative;
   width: 34px;
   height: 34px;
   flex: none;
-  border: 1px solid var(--color-line);
+  border: 1px solid var(--border-subtle);
   border-radius: 50%;
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
   transition:
     background 0.3s,
     border-color 0.3s;
@@ -40,7 +40,7 @@
 }
 :global(.pj) :global(.pj-faq-item)[open]:not(:global(.is-closing)) .faqToggle {
   background: var(--color-gold-light-a25);
-  border-color: var(--color-gold);
+  border-color: var(--border-accent);
 }
 :global(.pj) :global(.pj-faq-item)[open]:not(:global(.is-closing)) .faqToggle::after {
   transform: rotate(0);
@@ -52,7 +52,7 @@
 :global(.pj) .faqAnswer p {
   font-size: 16px;
   line-height: 1.8;
-  color: var(--color-text);
+  color: var(--text-body);
 }
 :global(.pj) .faqAnswer p + p {
   margin-top: 16px;
@@ -94,7 +94,7 @@
 @media (hover: hover) and (pointer: fine) {
   :global(.pj) :global(.pj-faq-item) summary:hover .faqToggle {
     background: var(--color-gold-light-a28);
-    border-color: var(--color-gold);
+    border-color: var(--border-accent);
     box-shadow: 0 0 0 4px var(--color-gold-a7);
   }
 }

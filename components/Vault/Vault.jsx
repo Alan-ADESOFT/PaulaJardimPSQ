@@ -14,15 +14,15 @@ export default function Vault() {
                 <stop offset="1" style={{ stopColor: 'var(--color-ink-121110)' }} />
               </radialGradient>
               <radialGradient id="pjHaloG">
-                <stop offset=".55" stopOpacity="0" style={{ stopColor: 'var(--color-gold-light)' }} />
-                <stop offset=".72" stopOpacity=".32" style={{ stopColor: 'var(--color-gold-light)' }} />
-                <stop offset="1" stopOpacity="0" style={{ stopColor: 'var(--color-gold-light)' }} />
+                <stop offset=".55" stopOpacity="0" style={{ stopColor: 'var(--accent-soft)' }} />
+                <stop offset=".72" stopOpacity=".32" style={{ stopColor: 'var(--accent-soft)' }} />
+                <stop offset="1" stopOpacity="0" style={{ stopColor: 'var(--accent-soft)' }} />
               </radialGradient>
             </defs>
             <circle className={styles.halo} cx="200" cy="200" r="198" fill="url(#pjHaloG)" />
             <circle className={styles.crack} cx="200" cy="200" r="151" pathLength="1" />
             <circle className={`${styles.crack} c2`} cx="200" cy="200" r="151" pathLength="1" />
-            <circle cx="200" cy="200" r="186" strokeWidth="2" style={{ stroke: 'var(--color-gold)' }} />
+            <circle cx="200" cy="200" r="186" strokeWidth="2" style={{ stroke: 'var(--accent)' }} />
             <circle
               cx="200"
               cy="200"
@@ -38,7 +38,7 @@ export default function Vault() {
               r="150"
               fill="url(#pjDoorG)"
               strokeWidth="1.5"
-              style={{ stroke: 'var(--color-gold-light)' }}
+              style={{ stroke: 'var(--accent-soft)' }}
             />
             <circle
               cx="200"
@@ -53,7 +53,7 @@ export default function Vault() {
                 cy="200"
                 r="78"
                 strokeWidth="2"
-                style={{ stroke: 'var(--color-gold-light)' }}
+                style={{ stroke: 'var(--accent-soft)' }}
               />
               <circle
                 cx="200"
@@ -63,7 +63,7 @@ export default function Vault() {
                 strokeDasharray="4 6"
                 style={{ stroke: 'var(--color-gold-light-a35)' }}
               />
-              <g strokeWidth="5" strokeLinecap="round" style={{ stroke: 'var(--color-gold-light)' }}>
+              <g strokeWidth="5" strokeLinecap="round" style={{ stroke: 'var(--accent-soft)' }}>
                 <path d="M200 122 V92" />
                 <path d="M200 278 V308" />
                 <path d="M122 200 H92" />
@@ -73,7 +73,7 @@ export default function Vault() {
                 <path d="M255 145 L276 124" />
                 <path d="M145 255 L124 276" />
               </g>
-              <g style={{ fill: 'var(--color-gold-light)' }}>
+              <g style={{ fill: 'var(--accent-soft)' }}>
                 <circle cx="200" cy="88" r="7" />
                 <circle cx="200" cy="312" r="7" />
                 <circle cx="88" cy="200" r="7" />
@@ -84,9 +84,9 @@ export default function Vault() {
                 cy="200"
                 r="22"
                 strokeWidth="2"
-                style={{ fill: 'var(--color-ink)', stroke: 'var(--color-gold-light)' }}
+                style={{ fill: 'var(--surface-inverse)', stroke: 'var(--accent-soft)' }}
               />
-              <circle cx="200" cy="200" r="7" style={{ fill: 'var(--color-gold-light)' }} />
+              <circle cx="200" cy="200" r="7" style={{ fill: 'var(--accent-soft)' }} />
             </g>
           </svg>{' '}
           <i className={styles.shock} aria-hidden="true" />

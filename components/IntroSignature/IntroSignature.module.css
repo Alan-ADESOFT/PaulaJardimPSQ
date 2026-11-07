@@ -5,7 +5,7 @@
   z-index: 200;
   display: grid;
   place-items: center;
-  background: var(--color-ivory);
+  background: var(--surface-page);
   transition:
     opacity 0.9s var(--ease-out),
     visibility 0.9s;
@@ -14,7 +14,7 @@
   font-family: var(--font-script);
   font-size: clamp(54px, 8vw, 104px);
   line-height: 1.2;
-  color: var(--color-gold-dark);
+  color: var(--text-accent);
   clip-path: inset(0 100% 0 0);
   padding: 0 0.2em;
 }
@@ -24,7 +24,7 @@
   top: calc(50% + clamp(46px, 6vw, 74px));
   width: min(260px, 50vw);
   height: 1px;
-  background: var(--color-gold);
+  background: var(--accent);
   transform: translateX(-50%) scaleX(0);
   transition: transform 1s var(--ease-out) 0.9s;
 }

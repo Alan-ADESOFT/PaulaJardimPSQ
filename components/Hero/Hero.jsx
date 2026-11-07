@@ -1,4 +1,4 @@
-import { applyLinkProps } from '@/libs/config';
+import ApplyButton from '@/components/ui/ApplyButton/ApplyButton';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -20,17 +20,7 @@ export default function Hero() {
           de recomeçar e querem aumentar o faturamento, sustentá-lo e crescer sem abrir mão da paz mental.
         </p>
         <div className={styles.heroCta}>
-          <a className="pj-btn js-apply magnetic" {...applyLinkProps}>
-            Faça sua aplicação individual{' '}
-            <span className="ar">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M5 12h14M13 6l6 6-6 6" />
-              </svg>
-            </span>
-          </a>
+          <ApplyButton>Faça sua aplicação individual</ApplyButton>
         </div>
       </div>
       <div className={styles.stage} id="pjStageHero">
@@ -38,11 +28,11 @@ export default function Hero() {
           <svg className={styles.ghosts} viewBox="0 0 1120 400" preserveAspectRatio="xMidYMid meet">
             <defs>
               <linearGradient id="pjLightG" gradientUnits="userSpaceOnUse" x1="-700" y1="0" x2="-100" y2="0">
-                <stop offset="0" stopOpacity=".16" style={{ stopColor: 'var(--color-gold)' }} />
-                <stop offset=".42" stopOpacity=".8" style={{ stopColor: 'var(--color-gold-light)' }} />
+                <stop offset="0" stopOpacity=".16" style={{ stopColor: 'var(--accent)' }} />
+                <stop offset=".42" stopOpacity=".8" style={{ stopColor: 'var(--accent-soft)' }} />
                 <stop offset=".5" stopOpacity="1" style={{ stopColor: 'var(--color-offwhite-fff4da)' }} />
-                <stop offset=".58" stopOpacity=".8" style={{ stopColor: 'var(--color-gold-light)' }} />
-                <stop offset="1" stopOpacity=".16" style={{ stopColor: 'var(--color-gold)' }} />
+                <stop offset=".58" stopOpacity=".8" style={{ stopColor: 'var(--accent-soft)' }} />
+                <stop offset="1" stopOpacity=".16" style={{ stopColor: 'var(--accent)' }} />
                 <animate attributeName="x1" values="-700;1120" dur="5.5s" repeatCount="indefinite" />
                 <animate attributeName="x2" values="-100;1720" dur="5.5s" repeatCount="indefinite" />
               </linearGradient>

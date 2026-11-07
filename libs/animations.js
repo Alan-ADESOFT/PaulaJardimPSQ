@@ -1312,7 +1312,7 @@ export function initLandingPage(root) {
       r.setAttribute('width', 12);
       r.setAttribute('height', 12);
       r.setAttribute('rx', 3);
-      r.style.fill = 'var(--color-gold)';
+      r.style.fill = 'var(--accent)';
       r.setAttribute('class', 'bolt');
       r.style.setProperty('--bx', (-Math.cos(a) * 16).toFixed(1) + 'px');
       r.style.setProperty('--by', (-Math.sin(a) * 16).toFixed(1) + 'px');

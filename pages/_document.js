@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="pt-BR">
       <Head>
         <meta name="color-scheme" content="only light" />
+        {/* Meta tag não lê variável CSS: este valor repete --surface-page (styles/tokens.css). */}
         <meta name="theme-color" content="#F5F0E8" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
