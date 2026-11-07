@@ -15,7 +15,8 @@ Atualizado: 2026-11-07 · por: Claude Code · branch: main (e claude/serene-shan
 - Hero: no celular as letras PSP/PSQ passam no peito; no notebook a foto não cobre mais o botão.
 
 ## Bloqueios
-- ID do Pixel e domínio próprio ainda vazios em `libs/config.js`.
+- Subdomínio protocolos.apaulajardim.com.br cadastrado na Railway; falta criar CNAME + TXT na Cloudflare (valores em `deploy/README.md`).
+- ID do Pixel ainda vazio em `libs/config.js`.
 - No GitHub, a branch padrão ainda é `claude/serene-shannon-dmwco9`; trocar para `main` em Settings → Branches.
 
 ## Precisa de decisão do Brenno
@@ -24,7 +25,7 @@ Atualizado: 2026-11-07 · por: Claude Code · branch: main (e claude/serene-shan
 - Avisar sobre cookies (LGPD) antes de ligar o Pixel da Meta?
 
 ## Próxima ação
-- Receber o ID do Pixel e o domínio próprio; preencher `libs/config.js` e apontar o DNS (ver `deploy/README.md`).
+- Quando o subdomínio responder: `SITE_URL = 'https://protocolos.apaulajardim.com.br'` em `libs/config.js` e publicar.
 
 ## Observações (candidatas a regra — ver regra dos dois erros)
 - Ao ajustar layout, conferir de 360 a 1920px (o 1º ajuste da Hero só olhou o celular e o problema do Brenno era no notebook).
