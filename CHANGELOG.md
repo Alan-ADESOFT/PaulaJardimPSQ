@@ -4,6 +4,7 @@
 ## Sprint 02 — Letras PSP/PSQ da Hero no celular (2026-11-07)
 ### Alterado
 - No celular, as letras grandes "PSP PSQ" da Hero passam na altura do peito da Paula, não mais na cabeça.
+- Em notebooks (1200 a ~1390px), o cabelo da Paula não cobre mais o botão da Hero: a foto acompanha a altura do palco.
 
 ## Sprint 01 — Link do formulário de aplicação (2026-11-07)
 ### Alterado

@@ -359,8 +359,10 @@
   }
 }
 
-/* Tablets: size the portrait by the stage height so it never covers the subtitle and the button. */
-@media (min-width: 721px) and (max-width: 1199px) {
+/* Tablet e desktop: a largura da foto acompanha a altura do palco, para a cabeça da Paula nunca
+   invadir o subtítulo e o botão. Antes valia só até 1199px e, em notebooks de 1200 a ~1390px, o
+   cabelo cobria o botão "Faça sua aplicação individual" (pedido do Brenno em 2026-11-07). */
+@media (min-width: 721px) {
   :global(.pj) .portrait {
     width: min(520px, calc(clamp(480px, 46vw, 640px) * 0.8));
   }

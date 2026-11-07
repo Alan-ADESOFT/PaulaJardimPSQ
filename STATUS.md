@@ -12,7 +12,7 @@ Atualizado: 2026-11-07 · por: Claude Code · branch: main (e claude/serene-shan
 - No ar na Railway (projeto Sigma System, serviço `paulajardim_psq`): https://paulajardimpsq-production.up.railway.app
 - Branch `main` no GitHub; push na `main` publica sozinho.
 - Botões "aplicar" levam ao formulário https://forms.gle/3WcByLFe7bQRJoXZA (abre em nova aba).
-- Hero no celular: letras PSP/PSQ desceram para a altura do peito; a cabeça da Paula fica livre.
+- Hero: no celular as letras PSP/PSQ passam no peito; no notebook a foto não cobre mais o botão.
 
 ## Bloqueios
 - ID do Pixel e domínio próprio ainda vazios em `libs/config.js`.
@@ -27,4 +27,4 @@ Atualizado: 2026-11-07 · por: Claude Code · branch: main (e claude/serene-shan
 - Receber o ID do Pixel e o domínio próprio; preencher `libs/config.js` e apontar o DNS (ver `deploy/README.md`).
 
 ## Observações (candidatas a regra — ver regra dos dois erros)
-- Nenhuma nova.
+- Ao ajustar layout, conferir de 360 a 1920px (o 1º ajuste da Hero só olhou o celular e o problema do Brenno era no notebook).
