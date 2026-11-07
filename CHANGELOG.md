@@ -1,6 +1,10 @@
 # Changelog — últimas 5 sprints
 > Anteriores em `docs/arquivo/changelog.md`. Limite: 200 linhas.
 
+## Sprint 02 — Letras PSP/PSQ da Hero no celular (2026-11-07)
+### Alterado
+- No celular, as letras grandes "PSP PSQ" da Hero passam na altura do peito da Paula, não mais na cabeça.
+
 ## Sprint 01 — Link do formulário de aplicação (2026-11-07)
 ### Alterado
 - Botões "aplicar" levam ao Google Forms de qualificação (https://forms.gle/3WcByLFe7bQRJoXZA), em nova aba.

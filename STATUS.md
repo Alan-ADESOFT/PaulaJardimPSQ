@@ -1,17 +1,18 @@
 # STATUS — Paula Jardim · Protocolos PSP e PSQ
-Atualizado: 2026-11-07 · por: Claude Code · branch: main (e claude/serene-shannon-dmwco9) · commit: ver `git log` (sprint 01)
+Atualizado: 2026-11-07 · por: Claude Code · branch: main (e claude/serene-shannon-dmwco9) · commit: ver `git log` (sprint 02)
 
 ## Sprint atual
-01 — Link do formulário de aplicação · aberta e fechada em 2026-11-07 · arquivo: docs/sprints/sprint-01-link-aplicacao.md
+02 — Letras PSP/PSQ da Hero no celular · aberta e fechada em 2026-11-07 · arquivo: docs/sprints/sprint-02-hero-letras-celular.md
 
 ## Em andamento
 - Nada. Próxima sprint ainda não aberta.
 
-## Concluído (sprints 00 e 01)
+## Concluído (sprints 00 a 02)
 - Zip importado, no padrão FlowTech (tokens semânticos, `ApplyButton`, lint, check:ui, documentação).
 - No ar na Railway (projeto Sigma System, serviço `paulajardim_psq`): https://paulajardimpsq-production.up.railway.app
 - Branch `main` no GitHub; push na `main` publica sozinho.
 - Botões "aplicar" levam ao formulário https://forms.gle/3WcByLFe7bQRJoXZA (abre em nova aba).
+- Hero no celular: letras PSP/PSQ desceram para a altura do peito; a cabeça da Paula fica livre.
 
 ## Bloqueios
 - ID do Pixel e domínio próprio ainda vazios em `libs/config.js`.

@@ -300,8 +300,10 @@
   :global(.pj):global(.loaded) .portrait {
     transform: none;
   }
+  /* As letras PSP/PSQ passam na altura do peito, como no desktop. Mais acima elas cruzavam a
+     cabeça da Paula (pedido do Brenno em 2026-11-07). */
   :global(.pj) .ghosts {
-    top: 2%;
+    top: 34%;
   }
   :global(.pj) .ghosts text {
     font-size: 310px;
