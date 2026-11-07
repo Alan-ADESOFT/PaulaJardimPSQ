@@ -1,0 +1,41 @@
+/* IntroSignature section styles */
+:global(.pj) .introSignature {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  background: var(--color-ivory);
+  transition:
+    opacity 0.9s var(--ease-out),
+    visibility 0.9s;
+}
+:global(.pj) .introSignature span {
+  font-family: var(--font-script);
+  font-size: clamp(54px, 8vw, 104px);
+  line-height: 1.2;
+  color: var(--color-gold-dark);
+  clip-path: inset(0 100% 0 0);
+  padding: 0 0.2em;
+}
+:global(.pj) .introSignature i {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + clamp(46px, 6vw, 74px));
+  width: min(260px, 50vw);
+  height: 1px;
+  background: var(--color-gold);
+  transform: translateX(-50%) scaleX(0);
+  transition: transform 1s var(--ease-out) 0.9s;
+}
+:global(.pj) .introSignature:global(.go) span {
+  clip-path: inset(0 -5% 0 0);
+  transition: clip-path 1.5s cubic-bezier(0.6, 0.1, 0.3, 1);
+}
+:global(.pj) .introSignature:global(.go) i {
+  transform: translateX(-50%) scaleX(1);
+}
+:global(.pj) .introSignature:global(.out) {
+  opacity: 0;
+  visibility: hidden;
+}

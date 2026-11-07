@@ -1,0 +1,148 @@
+/* Application section styles */
+:global(.pj) .final {
+  padding: clamp(40px, 5vw, 72px) 0 calc(var(--space-section) + 10px);
+  text-align: center;
+  background: linear-gradient(180deg, var(--color-ivory), var(--color-sand));
+}
+:global(.pj) .final :global(.pj-t) {
+  font-size: clamp(28px, 3.2vw, 44px);
+  max-width: 19em;
+  margin: 0 auto;
+}
+:global(.pj) .final :global(.pj-p) {
+  margin: 22px auto 0;
+  color: var(--color-muted);
+}
+:global(.pj) .final :global(.pj-p) + :global(.pj-p) {
+  margin-top: 12px;
+  color: var(--color-text);
+}
+:global(.pj) .final {
+  background: linear-gradient(180deg, var(--color-ivory), var(--color-sand));
+}
+:global(.pj) .flap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 46%;
+  z-index: 6;
+  pointer-events: none;
+  transform-origin: top center;
+  background: linear-gradient(180deg, var(--color-offwhite-f3ebdd), var(--color-sand-e9ddc9));
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  filter: drop-shadow(0 10px 14px var(--color-text-3c2e19-a22));
+}
+:global(.pj):global(.js-on) :global(.pj-invite) .flap {
+  transform: rotateX(0);
+}
+:global(.pj) :global(.pj-invite):global(.in) .flap {
+  transform: rotateX(-178deg);
+  opacity: 0;
+  transition:
+    transform 1.4s cubic-bezier(0.6, 0, 0.2, 1) 0.7s,
+    opacity 0.5s ease 1.7s;
+}
+:global(.pj) .wax {
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  z-index: 7;
+  width: 62px;
+  height: 62px;
+  margin-left: -31px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+    circle at 35% 30%,
+    var(--color-gold-light-e7d4a8),
+    var(--color-gold) 55%,
+    var(--color-gold-dark)
+  );
+  box-shadow:
+    0 10px 20px -8px var(--color-text-3c2e19-a60),
+    inset 0 0 0 3px var(--color-ivory-light-fff8e6-a25),
+    inset 0 0 0 6px var(--color-gold-dark-a35);
+  opacity: 0;
+  transform: scale(1.9);
+}
+:global(.pj) .wax::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: inherit;
+  clip-path: polygon(
+    50% 0,
+    61% 6%,
+    72% 2%,
+    79% 12%,
+    90% 13%,
+    92% 25%,
+    100% 33%,
+    96% 45%,
+    100% 57%,
+    92% 67%,
+    92% 80%,
+    80% 84%,
+    73% 96%,
+    61% 93%,
+    50% 100%,
+    39% 93%,
+    27% 96%,
+    20% 84%,
+    8% 80%,
+    8% 67%,
+    0 57%,
+    4% 45%,
+    0 33%,
+    8% 25%,
+    10% 13%,
+    21% 12%,
+    28% 2%,
+    39% 6%
+  );
+  z-index: -1;
+  opacity: 0.9;
+}
+:global(.pj) .wax b {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--color-graphite-3b2c12);
+  text-shadow: 0 1px 0 var(--color-sand-fff0c8-a50);
+}
+:global(.pj) :global(.pj-invite):global(.in) .wax {
+  animation: pjStamp 0.7s cubic-bezier(0.3, 1.5, 0.5, 1) 1.15s 1 forwards;
+}
+
+@keyframes pjStamp {
+  0% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.94);
+  }
+  75% {
+    transform: scale(1.03) rotate(-2deg);
+  }
+  88% {
+    transform: scale(0.99) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The invite card title keeps its own spacing and width (overrides the section title rule above). */
+:global(.pj) .final :global(.pj-invite) :global(.pj-t) {
+  max-width: 17em;
+}
+:global(.pj) .final :global(.pj-invite) > :global(.pj-t) {
+  margin-top: 22px;
+}

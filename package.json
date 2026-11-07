@@ -1,0 +1,19 @@
+{
+  "name": "paula-jardim-protocols",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page dos Protocolos PSP e PSQ | Paula Jardim",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "16.4.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

@@ -1,0 +1,239 @@
+/* About section styles */
+:global(.pj) .bio {
+  background: linear-gradient(180deg, var(--color-ivory-light), var(--color-ivory));
+}
+:global(.pj) .bioGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+:global(.pj) .bioPhoto {
+  position: relative;
+}
+:global(.pj) .bioPhoto .stick {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-height: 620px;
+  overflow: hidden;
+}
+:global(.pj) .bioPhoto img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0%;
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.8s cubic-bezier(0.7, 0, 0.2, 1) 0.15s;
+}
+:global(.pj) .bioPhoto:global(.in) img {
+  clip-path: inset(0 0 0 0);
+}
+:global(.pj) .bioPhoto .stick::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 1;
+  background: var(--color-sand);
+  transform-origin: top;
+  transform: scaleY(0);
+  pointer-events: none;
+}
+:global(.pj) .bioPhoto:global(.in) .stick::before {
+  animation: pjCurtain 1.9s cubic-bezier(0.7, 0, 0.2, 1) forwards;
+}
+:global(.pj) .bioPhoto .stick::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 70%, var(--color-ivory-a50));
+  pointer-events: none;
+}
+:global(.pj) .medals {
+  position: absolute;
+  z-index: 3;
+  left: clamp(20px, 3vw, 44px);
+  bottom: clamp(28px, 4vw, 52px);
+  display: flex;
+  gap: 14px;
+  z-index: 2;
+}
+:global(.pj) .medal {
+  width: clamp(118px, 10vw, 142px);
+  aspect-ratio: 1;
+  perspective: 700px;
+}
+:global(.pj) .medal .coin {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 17%;
+  transform-style: preserve-3d;
+  background: radial-gradient(
+    circle at 35% 30%,
+    var(--color-sand-eadbb8),
+    var(--color-gold-light) 45%,
+    var(--color-gold-c7ae7c) 100%
+  );
+  box-shadow:
+    0 22px 34px -16px var(--color-black-a55),
+    inset 0 0 0 4px var(--color-ivory-light-fff8e6-a35),
+    inset 0 0 0 6px var(--color-gold-dark-7e5f2a-a45);
+  overflow: hidden;
+}
+:global(.pj) .medal .coin::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(115deg, transparent 35%, var(--color-white-a70) 50%, transparent 65%);
+  transform: translateX(-120%);
+}
+:global(.pj) .bioPhoto:global(.in) .medal .coin::after {
+  animation: pjCoinShine 1.8s var(--ease-out) 2.2s 1 forwards;
+}
+:global(.pj) .bioPhoto:global(.in) .medal:nth-child(2) .coin::after {
+  animation-delay: 2.6s;
+}
+:global(.pj) .medal:hover .coin {
+  animation: pjFlip 1.3s var(--ease-out);
+}
+:global(.pj) .medal em {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 10.5px;
+  line-height: 1.2;
+  color: var(--color-text-4a3a1c);
+}
+:global(.pj) .medal b {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 12.5px;
+  line-height: 1.15;
+  color: var(--color-ink);
+}
+:global(.pj) .bioText {
+  padding: calc(var(--space-section) + var(--wave-height)) clamp(24px, 5vw, 90px) clamp(56px, 6vw, 90px);
+}
+:global(.pj) .bioText :global(.pj-h2) {
+  margin-bottom: clamp(20px, 2.4vw, 28px);
+}
+:global(.pj) .bioText :global(.pj-lead) {
+  max-width: 30em;
+}
+:global(.pj) .trail {
+  position: relative;
+  margin-top: clamp(34px, 4vw, 48px);
+  padding-left: 40px;
+  max-width: 36em;
+}
+:global(.pj) .trail::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--color-gold-dark-a18);
+}
+:global(.pj) .trail :global(.fill) {
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  width: 2px;
+  height: calc(100% - 16px);
+  background: linear-gradient(180deg, var(--color-gold-dark), var(--color-gold-light));
+  transform-origin: top;
+  transform: scaleY(var(--p, 0));
+  transition: transform 1.2s var(--ease-out);
+}
+:global(.pj) .dotsCanvas {
+  width: min(260px, 100%) !important;
+  height: 96px !important;
+  margin: 4px 0 10px;
+}
+:global(.pj) .stepCard {
+  padding: 20px 22px;
+  background: var(--color-white-a72);
+}
+:global(.pj) .bioPhoto img {
+  filter: sepia(0.1) saturate(0.92) contrast(1.02);
+}
+:global(.pj) .bioPhoto .stick img {
+  transform-origin: 50% 0;
+  transform: scale(1.06) translate(calc(var(--px, 0) * -10px), calc(var(--py, 0) * -8px));
+}
+:global(.pj) .bioPhoto .medals {
+  transform: translate(calc(var(--px, 0) * 12px), calc(var(--py, 0) * 9px));
+}
+
+@media (max-width: 980px) {
+  :global(.pj) .bioGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  :global(.pj) .bioPhoto .stick {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4/5;
+  }
+  :global(.pj) .bioPhoto .stick::after {
+    background: linear-gradient(180deg, transparent 70%, var(--color-ivory-light-a80));
+  }
+  :global(.pj) .bioText {
+    padding: 48px 24px 48px;
+  }
+}
+
+@media (max-width: 720px) {
+  :global(.pj) .medal {
+    width: 104px;
+  }
+  :global(.pj) .medal em {
+    font-size: 9px;
+  }
+  :global(.pj) .medal b {
+    font-size: 11px;
+  }
+  :global(.pj) .trail {
+    padding-left: 34px;
+  }
+}
+
+@keyframes pjCoinShine {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes pjCurtain {
+  0% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+@keyframes pjFlip {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

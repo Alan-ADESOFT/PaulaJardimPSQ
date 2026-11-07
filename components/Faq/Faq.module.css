@@ -1,0 +1,131 @@
+/* Faq section styles */
+:global(.pj) .faq {
+  padding: clamp(80px, 9vw, 130px) 0 clamp(30px, 4vw, 60px);
+  background: var(--color-ivory);
+}
+:global(.pj) .faqHead {
+  text-align: center;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+:global(.pj) .faqList {
+  max-width: 900px;
+  margin: 0 auto;
+  border-top: 1px solid var(--color-line);
+}
+:global(.pj) .faqToggle {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  color: var(--color-gold-dark);
+  transition:
+    background 0.3s,
+    border-color 0.3s;
+}
+:global(.pj) .faqToggle::before,
+:global(.pj) .faqToggle::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 15px;
+  height: 1px;
+  background: currentColor;
+}
+:global(.pj) .faqToggle::after {
+  transform: rotate(90deg);
+  transition: transform 0.3s var(--ease-out);
+}
+:global(.pj) :global(.pj-faq-item)[open]:not(:global(.is-closing)) .faqToggle {
+  background: var(--color-gold-light-a25);
+  border-color: var(--color-gold);
+}
+:global(.pj) :global(.pj-faq-item)[open]:not(:global(.is-closing)) .faqToggle::after {
+  transform: rotate(0);
+}
+:global(.pj) .faqAnswer {
+  padding: 0 clamp(0px, 2vw, 24px) 28px 0;
+  max-width: 49em;
+}
+:global(.pj) .faqAnswer p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text);
+}
+:global(.pj) .faqAnswer p + p {
+  margin-top: 16px;
+}
+
+@media (max-width: 720px) {
+  :global(.pj) .faqAnswer p {
+    font-size: 15px;
+  }
+}
+
+:global(.pj) .faqToggle {
+  transition:
+    background 0.35s var(--ease-out),
+    border-color 0.35s,
+    color 0.35s,
+    box-shadow 0.35s;
+}
+:global(.pj) .faqToggle::after {
+  transition: transform 0.4s var(--ease-out);
+}
+:global(.pj) :global(.pj-faq-item):global(.is-opening) .faqAnswer p {
+  animation: pjFaqAnswer 0.45s var(--ease-out) both;
+}
+:global(.pj) :global(.pj-faq-item):global(.is-opening) .faqAnswer p:nth-child(2) {
+  animation-delay: 0.06s;
+}
+:global(.pj) :global(.pj-faq-item):global(.is-opening) .faqAnswer p:nth-child(3) {
+  animation-delay: 0.12s;
+}
+:global(.pj) .faqAnswer {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+:global(.pj) :global(.pj-faq-item):global(.is-closing) .faqAnswer {
+  opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :global(.pj) :global(.pj-faq-item) summary:hover .faqToggle {
+    background: var(--color-gold-light-a28);
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 4px var(--color-gold-a7);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(.pj):global(.js-on) .faq [data-rv] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  :global(.pj) .faq [data-mask] :global(.mi) {
+    transform: none;
+    transition: none;
+  }
+  :global(.pj) .faqToggle,
+  :global(.pj) .faqToggle::after,
+  :global(.pj) .faqAnswer {
+    transition: none;
+  }
+  :global(.pj) :global(.pj-faq-item):global(.is-opening) .faqAnswer p {
+    animation: none;
+  }
+}
+
+@keyframes pjFaqAnswer {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

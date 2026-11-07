@@ -1,0 +1,141 @@
+/* Vault section styles */
+:global(.pj) .vault {
+  padding: calc(var(--space-section) + var(--wave-height) + 20px) 0
+    calc(var(--space-section) + var(--wave-height) + 20px);
+}
+:global(.pj) .vaultGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
+}
+:global(.pj) .door {
+  --rot: 0deg;
+  position: relative;
+  width: min(320px, 72vw);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+:global(.pj) .door svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+:global(.pj) .door :global(.bolt) {
+  transition: transform 0.9s cubic-bezier(0.5, 0, 0.2, 1.4);
+}
+:global(.pj) .door .halo {
+  transition: opacity 1.2s var(--ease-out);
+  opacity: 0;
+}
+:global(.pj) .door:global(.shut) .halo {
+  opacity: 1;
+}
+:global(.pj) .door .state {
+  position: absolute;
+  left: 50%;
+  bottom: -38px;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--color-gold-light);
+  opacity: 0;
+  transition: opacity 0.8s;
+  white-space: nowrap;
+}
+:global(.pj) .door:global(.shut) .state {
+  opacity: 1;
+}
+:global(.pj) .vault :global(.pj-h2) {
+  margin-bottom: clamp(22px, 2.6vw, 32px);
+}
+:global(.pj) .redact p {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-offwhite-a88);
+  max-width: 36em;
+}
+:global(.pj) .redact p + p {
+  margin-top: 16px;
+}
+:global(.pj) .redact :global(.last) {
+  margin-top: clamp(24px, 3vw, 34px);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.25;
+  color: var(--color-gold-light);
+  font-variation-settings: 'SOFT' 40;
+}
+:global(.pj) .door .shock {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 76%;
+  height: 76%;
+  margin: -38% 0 0 -38%;
+  border-radius: 50%;
+  border: 2px solid var(--color-gold-light);
+  opacity: 0;
+  pointer-events: none;
+}
+:global(.pj) .door:global(.boom) .shock {
+  animation: pjShock 1.6s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+:global(.pj) .door:global(.boom) .shock:global(.s2) {
+  animation-delay: 0.25s;
+}
+:global(.pj) .door .crack {
+  fill: none;
+  stroke: var(--color-offwhite-fff1cc);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 0.08 0.92;
+  stroke-dashoffset: 0;
+  opacity: 0;
+  filter: drop-shadow(0 0 5px var(--color-sand-ffecbe));
+}
+:global(.pj) .door:global(.shut) .crack {
+  animation: pjCrack 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s 1 forwards;
+}
+:global(.pj) .door:global(.shut) .crack:global(.c2) {
+  animation-delay: 0.75s;
+  stroke-dasharray: 0.04 0.96;
+  stroke-width: 2;
+}
+
+@media (max-width: 980px) {
+  :global(.pj) .vaultGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@keyframes pjCrack {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    stroke-dashoffset: -1;
+  }
+}
+
+@keyframes pjShock {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+}
