@@ -6,7 +6,7 @@ Confiança: [C] Confirmado no código · [P] Documentado pelo provedor · [V] Pe
 |---|---|---|---|---|---|
 | Landing com 10 seções (Hero → Footer) | validada [C] | 00 | `/` | `components/<Secao>/` | build, lint e check:ui verdes; prints em 390/820/1440px |
 | Botão "aplicar" compartilhado | validada [C] | 00 | `/` | `ui/ApplyButton` | 4 usos; HTML idêntico ao original |
-| Destino da aplicação (form → WhatsApp → #aplicacao) | pronta [C] | 00 | `/` | `libs/config.js` | links ainda vazios: hoje leva a `#aplicacao` |
+| Destino da aplicação (form → WhatsApp → #aplicacao) | validada [C] | 01 | `/` | `libs/config.js` | Google Forms (forms.gle/3WcByLFe7bQRJoXZA), nova aba; conferido no ar |
 | Meta Pixel (PageView + Lead no clique) | pronta [C] | 00 | `/` | `pages/index.js`, `libs/animations.js` | desligado até preencher `META_PIXEL_ID`; disparo real [V] |
 | SEO e prévia de compartilhamento (OG) | pronta [C] | 00 | `/` | `pages/index.js` | `og:image` precisa de `SITE_URL` para URL absoluta |
 | Animações (abertura, revelação, canvas, magnético) | validada [C] | 00 | `/` | `libs/animations.js` | sem erros de console nos 3 tamanhos |

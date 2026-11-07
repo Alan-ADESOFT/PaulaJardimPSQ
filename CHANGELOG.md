@@ -1,6 +1,10 @@
 # Changelog — últimas 5 sprints
 > Anteriores em `docs/arquivo/changelog.md`. Limite: 200 linhas.
 
+## Sprint 01 — Link do formulário de aplicação (2026-11-07)
+### Alterado
+- Botões "aplicar" levam ao Google Forms de qualificação (https://forms.gle/3WcByLFe7bQRJoXZA), em nova aba.
+
 ## Sprint 00 — Base no padrão FlowTech (2026-11-07)
 ### Adicionado
 - Código da landing importado do zip `pa_gina-paula-jardim.zip` (commit de base sem alterações).

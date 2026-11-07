@@ -8,7 +8,8 @@
 export const SITE_URL = '';
 
 // Link do formulário de aplicação. Todos os botões "aplicar" apontam para ele.
-export const APPLY_URL = '';
+// Google Forms "Qualificação para protocolos Individuais" (enviado pelo Brenno em 2026-11-07).
+export const APPLY_URL = 'https://forms.gle/3WcByLFe7bQRJoXZA';
 
 // WhatsApp (somente números, com DDI e DDD). Ex.: '5511999999999'
 // Usado nos botões apenas se APPLY_URL estiver vazio.
