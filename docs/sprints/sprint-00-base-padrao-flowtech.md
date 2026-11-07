@@ -58,7 +58,7 @@ Rotas: `/` · componentes: todas as seções (CSS), Hero/PSP/PSQ/Aplicação (JS
 
 ### Pendências e riscos
 - Links de aplicação, WhatsApp, Pixel e `SITE_URL` vazios: hoje os botões levam a `#aplicacao`.
-- Deploy na Railway não conferido (sem acesso nesta sessão).
+- Deploy feito e conferido na Railway em 2026-11-07 (check:ui verde no domínio publicado).
 - Consentimento de cookies antes do Pixel (LGPD) não avaliado.
 
 ### Aprendizados (candidatos a CLAUDE.md)

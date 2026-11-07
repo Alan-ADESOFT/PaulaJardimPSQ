@@ -1,5 +1,5 @@
 # STATUS — Paula Jardim · Protocolos PSP e PSQ
-Atualizado: 2026-11-07 · por: Claude Code · branch: claude/serene-shannon-dmwco9 · commit: 05b181a
+Atualizado: 2026-11-07 · por: Claude Code · branch: main (e claude/serene-shannon-dmwco9) · commit: 6d2bbcf
 
 ## Sprint atual
 00 — Base no padrão FlowTech · aberta e fechada em 2026-11-07 · arquivo: docs/sprints/sprint-00-base-padrao-flowtech.md
@@ -13,9 +13,13 @@ Atualizado: 2026-11-07 · por: Claude Code · branch: claude/serene-shannon-dmwc
 - Botão "aplicar" virou um componente só (`components/ui/ApplyButton`).
 - Lint, conferência automática de celular/tablet/desktop e documentação do padrão.
 - Corrigido: "voltar ao início" pequeno demais no toque; contorno de foco com pouco contraste.
+- No ar na Railway (projeto Sigma System, serviço `paulajardim_psq`): https://paulajardimpsq-production.up.railway.app
+- Branch `main` criada no GitHub; push na `main` publica sozinho.
 
 ## Bloqueios
-- Links de aplicação, WhatsApp, ID do Pixel e domínio vazios em `libs/config.js`: os botões levam ao fim da página.
+- Link do formulário de aplicação pedido pelo Brenno, mas ainda não recebido: os botões levam ao fim da página.
+- ID do Pixel e domínio próprio ainda vazios em `libs/config.js`.
+- No GitHub, a branch padrão ainda é `claude/serene-shannon-dmwco9`; trocar para `main` em Settings → Branches.
 
 ## Precisa de decisão do Brenno
 - Animações: respeitar ou não quem desliga "efeitos de animação" no computador/celular (hoje ignora; ver DECISIONS.md).
@@ -23,7 +27,7 @@ Atualizado: 2026-11-07 · por: Claude Code · branch: claude/serene-shannon-dmwc
 - Avisar sobre cookies (LGPD) antes de ligar o Pixel da Meta?
 
 ## Próxima ação
-- Receber da cliente o link do formulário (ou WhatsApp), o ID do Pixel e o domínio; preencher `libs/config.js` e publicar na Railway.
+- Receber o link do formulário e colocar em `APPLY_URL` (`libs/config.js`); push na `main` publica.
 
 ## Observações (candidatas a regra — ver regra dos dois erros)
 - Nenhuma nova (as duas desta sprint já viraram armadilha no CLAUDE.md).

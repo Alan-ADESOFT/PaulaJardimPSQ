@@ -16,5 +16,8 @@
 - `--focus-ring` passa para dourado escuro (contraste 3,16:1+ em todas as superfícies).
 ### Corrigido
 - "Voltar ao início" no rodapé: área de toque de 26px para 46px no celular/tablet, sem mexer no desenho.
+### Deploy
+- Primeiro deploy na Railway (projeto Sigma System, serviço `paulajardim_psq`, branch `main`).
 ### Docs
 - README com árvore real, comandos e armadilha do `NODE_ENV`.
+- `deploy/README.md` com o que foi conferido no primeiro deploy.

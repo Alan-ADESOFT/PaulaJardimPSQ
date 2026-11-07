@@ -1,28 +1,31 @@
 # Deploy — Paula Jardim · Protocolos PSP e PSQ
-Última verificação: 2026-11-07 (só a documentação; nenhum deploy foi feito ou conferido nesta data)
+Última verificação: 2026-11-07 (primeiro deploy feito e conferido nesta data)
 
-## Arquitetura de produção
-Um serviço Node rodando `next start`. A página é gerada estática no build (`○ /` no resumo do `next build`), então
-não depende de banco, fila, storage ou e-mail.
-- Provedor indicado no zip original: **Railway** (build `npm run build`, start `npm start`).
-- **Pendente de verificação:** projeto Railway existente, região, domínio final e DNS.
+## Arquitetura de produção (Confirmado na Railway)
+- Provedor: **Railway** · workspace "Alan_Dias's Projects" · projeto **Sigma System** · ambiente `production`.
+- Serviço: **`paulajardim_psq`** · região `us-west2` · 1 réplica · builder Railpack (padrão).
+- Origem: GitHub `Alan-ADESOFT/PaulaJardimPSQ`, branch **`main`**. Todo push na `main` publica sozinho.
+- Domínio: https://paulajardimpsq-production.up.railway.app (domínio da Railway). Domínio próprio: **pendente**.
+- Um serviço Node com `next start`; a página é gerada estática no build. Sem banco, fila, storage ou e-mail.
 
-## Runtime e comandos (confirmados no package.json)
-- Node >= 20.9 (`engines`), recomendado 22 (`.nvmrc`).
-- Build: `npm run build` · Start: `npm start` (Next lê `PORT` do ambiente).
-- Antes de publicar: `npm run lint` e `npm run check:ui` verdes.
+## Runtime e comandos (confirmados no package.json e no log de build)
+- Node pela versão do `.nvmrc` (22). Railpack roda `npm install` → `npm run build` → `npm start` (Next lê `PORT`).
+- Antes de publicar: `npm run lint` e `npm run check:ui` verdes. Depois: `npm run check:ui -- --url <domínio>`.
 
 ## Variáveis por nome
 Nenhuma. A configuração fica em `libs/config.js` (ver README → "O que configurar antes de publicar").
-`NODE_ENV` precisa ser `production` no build (a Railway já faz isso).
 
 ## Healthcheck
-`GET /` deve responder 200.
+`GET /` responde 200 (conferido em 2026-11-07). Não há healthcheck configurado no serviço.
+
+## Domínio próprio
+Na Railway: serviço `paulajardim_psq` → Settings → Networking → Custom Domain. Ela mostra o registro DNS (CNAME)
+que precisa ser criado no provedor do domínio. Depois, preencher `SITE_URL` em `libs/config.js`.
 
 ## Rollback
-Na Railway: reimplantar o deploy anterior pelo painel (Deployments → Redeploy). Como não há banco, voltar a versão
-não tem efeito colateral.
+Railway → serviço `paulajardim_psq` → Deployments → deploy anterior → Redeploy. Sem banco, voltar a versão não
+tem efeito colateral.
 
-## Alternativa
-Por ser estática, a página também roda na Vercel sem mudança de código. Escolher um provedor só e registrar em
-`DECISIONS.md`.
+## Observação
+No mesmo projeto existem outros serviços da Paula (`landingpage_paula`, `paulajardim_app_livro`) e de outros
+clientes. Este serviço é independente deles.
