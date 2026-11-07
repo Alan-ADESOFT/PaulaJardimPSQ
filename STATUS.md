@@ -1,5 +1,5 @@
 # STATUS — Paula Jardim · Protocolos PSP e PSQ
-Atualizado: 2026-11-07 · por: Claude Code · branch: claude/serene-shannon-dmwco9 · commit: ver `git log` (sprint 00)
+Atualizado: 2026-11-07 · por: Claude Code · branch: claude/serene-shannon-dmwco9 · commit: 05b181a
 
 ## Sprint atual
 00 — Base no padrão FlowTech · aberta e fechada em 2026-11-07 · arquivo: docs/sprints/sprint-00-base-padrao-flowtech.md
